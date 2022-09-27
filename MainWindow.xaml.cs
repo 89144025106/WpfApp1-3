@@ -23,9 +23,9 @@ namespace WpfApp1_Гуляева_Кристина_пр3
         public MainWindow()
         {
             InitializeComponent();
-            a.Text = "4,6";
-            p.Text = "2,9";
-            c.Text = "9,5";
+            A.Text = "4,6";
+            P.Text = "2,9";
+            C.Text = "9,5";
             Itog.Text = "Ст. гр. ИСП Гуляева, Житкова";
 
             
@@ -35,10 +35,23 @@ namespace WpfApp1_Гуляева_Кристина_пр3
         {
             Itog.Text += Environment.NewLine + "Практическая работа 2";
             //  Считывание значения a
-            double a = double.Parse(a.Text);
+            double a = double.Parse(A.Text);
             // Вывод значения a в окно
-            Itog.Text += Environment.NewLine + "a = " + a.ToString();
-
+            Itog.Text += Environment.NewLine + "a = " + A.ToString();
+            //Считываем значение p
+            double p = double.Parse(P.Text);
+            //Вывод значения p в окно
+            Itog.Text += Environment.NewLine + "С = " + C.ToString();
+            //считывание значение c
+            double c = double.Parse(C.Text);
+            //Вывод значения C в окно
+            Itog.Text += Environment.NewLine + "C = " + C.ToString();
+            //Вычисляем арифметическое выражение
+            double s = Math.Tan(p - a) * Math.Tan(p - a);
+            double h = Math.Exp(p - a);
+            double l = Math.Sqrt(Math.Cos(p - c) * Math.Sin(p - a)); 
+            // Выводим результа в окно
+            Itog.Text += Environment.NewLine + "Результат = h " + h.ToString();
         }
 
         private void Itog_TextChanged(object sender, TextChangedEventArgs e)

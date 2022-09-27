@@ -26,6 +26,7 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             A.Text = "4,6";
             P.Text = "2,9";
             C.Text = "9,5";
+            B.Text = "1,6";
             Itog.Text = "Ст. гр. ИСП Гуляева, Житкова";
 
             
@@ -41,15 +42,19 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             //Считываем значение p
             double p = double.Parse(P.Text);
             //Вывод значения p в окно
-            Itog.Text += Environment.NewLine + "С = " + C.ToString();
+            Itog.Text += Environment.NewLine + "P = " + C.ToString();
             //считывание значение c
             double c = double.Parse(C.Text);
             //Вывод значения C в окно
             Itog.Text += Environment.NewLine + "C = " + C.ToString();
+            double b = double.Parse(B.Text);
+            //Вывод значения p в окно
+            Itog.Text += Environment.NewLine + "B = " + C.ToString();
             //Вычисляем арифметическое выражение
             double s = Math.Tan(p - a) * Math.Tan(p - a);
             double h = Math.Exp(p - a);
-            double l = Math.Sqrt(Math.Cos(p - c) * Math.Sin(p - a)); 
+            double l = Math.Sqrt(Math.Cos(p - b) * Math.Sin(p - c)); 
+
             // Выводим результа в окно
             Itog.Text += Environment.NewLine + "Результат = h " + h.ToString();
         }

@@ -27,7 +27,7 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             P.Text = "2,9";
             C.Text = "9,5";
             B.Text = "1,6";
-            Itog.Text = "Ст. гр. ИСП Гуляева, Житкова";
+            Itog.Text = "Ст. гр. ИСП Гуляева";
 
             
         }
@@ -38,22 +38,24 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             //  Считывание значения a
             double a = double.Parse(A.Text);
             // Вывод значения a в окно
-            Itog.Text += Environment.NewLine + "a = " + A.ToString();
+            Itog.Text += Environment.NewLine + "A = " + a.ToString();
             //Считываем значение p
             double p = double.Parse(P.Text);
             //Вывод значения p в окно
-            Itog.Text += Environment.NewLine + "P = " + C.ToString();
+            Itog.Text += Environment.NewLine + "P = " + p.ToString();
             //считывание значение c
             double c = double.Parse(C.Text);
             //Вывод значения C в окно
-            Itog.Text += Environment.NewLine + "C = " + C.ToString();
+            Itog.Text += Environment.NewLine + "C = " + c.ToString();
+            //Считываем значение b
             double b = double.Parse(B.Text);
-            //Вывод значения p в окно
-            Itog.Text += Environment.NewLine + "B = " + C.ToString();
+            //Вывод значения b в окно
+            Itog.Text += Environment.NewLine + "B = " + b.ToString();
+                      
             //Вычисляем арифметическое выражение
-            double s = Math.Tan(p - a) * Math.Tan(p - a);
-            double h = Math.Exp(p - a);
-            double l = Math.Sqrt(Math.Cos(p - b) * Math.Sin(p - c)); 
+            double s = Math.Tan(p - a) * Math.Tan(p - b);
+            double h = Math.Exp(p - c);
+            
 
             // Выводим результа в окно
             Itog.Text += Environment.NewLine + "Результат = h " + h.ToString();
@@ -64,4 +66,5 @@ namespace WpfApp1_Гуляева_Кристина_пр3
 
         }
     }
-}
+    }
+

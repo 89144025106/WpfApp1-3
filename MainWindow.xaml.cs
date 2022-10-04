@@ -27,6 +27,7 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             P.Text = "2,9";
             C.Text = "9,5";
             B.Text = "1,6";
+           
             Itog.Text = "Ст. гр. ИСП Гуляева";
 
             
@@ -53,18 +54,14 @@ namespace WpfApp1_Гуляева_Кристина_пр3
             Itog.Text += Environment.NewLine + "B = " + b.ToString();
                       
             //Вычисляем арифметическое выражение
-            double s = Math.Tan(p - a) * Math.Tan(p - b);
-            double h = Math.Exp(p - c);
-            
-
+            double s = Math.Tan (p - a) * Math.Tan(p - b)*(p - c);
+                       
             // Выводим результа в окно
-            Itog.Text += Environment.NewLine + "Результат = h " + h.ToString();
+            Itog.Text += Environment.NewLine + "Результат = h" + h .ToString();
         }
 
-        private void Itog_TextChanged(object sender, TextChangedEventArgs e)
-        {
+          
 
         }
-    }
     }
 
